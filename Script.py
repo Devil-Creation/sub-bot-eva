@@ -1,6 +1,24 @@
 class script(object):
-    START_TXT = """𝙷𝙴𝙻𝙾 {},
-𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂, 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙴𝙽𝙹𝙾𝚈 😍"""
+    START_TXT = """👋 **Hey There {} !**
+
+**ɪ'ᴍ  🄲🄸🄽🄴🄷🅄🄱 සිංහල උපසිරැසි sᴇᴀʀᴄʜᴇʀ ʙᴏᴛ ɪɴ ᴄɪɴᴇʜᴜʙ ᴄᴏᴍᴍᴜɴɪᴛʏ** . .
+
+⚡️ **ʙᴏᴛ ɴᴀᴍᴇ : @Sub_searcher_bot **
+
+මට පුලුවන් ඔයාට ඕන කර ғɪʟᴍ එක ᴛᴠ sᴇʀɪᴇs එක සිංහල උපසිරැසි හොයල දෙන්න . . .
+ඔයාලට මොකක් හරි ගැටලුවක් ආවොත් ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ එක හරි message එකක් හරි දාන්න
+
+😇 ආ ! අපේ ᴅᴀᴛᴀʙᴀsᴇ එකේ ඔයා හොයන සිංහල උපසිරැසි තිබ්බෙ නැත්නම් message එකක් දාලා තියන්න අපි පුලුවන් ඉක්මනට ᴜᴘʟᴏᴀᴅ කරන්නම් 
+
+🍀 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ; @cinehub_family
+
+⚠ All The Subtitle Files in this Bot is Either forwarded From Other Channels Or Taken From the Internet, we Don't Own Any Content About Subs
+
+📌Other Options
+🎬 ඔයාලට මේ වගේ ғɪʟᴍ ᴏʀ ᴛᴠ sᴇʀɪᴇs එකක් හොයාගන්න ඕන නම් මෙන්න ඉන්නවා අපේ @media_searcher_bot 
+කරන්න තියෙන්නෙ මේ වගෙම ғɪʟᴍ එ‍කේ ᴛᴠ sᴇʀɪᴇs එ‍කේ name එක search කරන එක විතරයි
+
+🅢🅗🅐🅡🅔 & 🅢🅤🅟🅟🅞🅡🅣 🔗https://t.me/sub_searcher_bot 😍"""
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
     ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
