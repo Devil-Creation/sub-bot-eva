@@ -66,7 +66,6 @@ async def filter(client, message):
         files = await get_search_results(query=search)
         if files:
             for file in files:
-                file_id = file.file_id
                 filename = f"[{get_size(file.file_size)}] {file.file_name}"
                 btn.append(
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
