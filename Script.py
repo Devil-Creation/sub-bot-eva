@@ -14,6 +14,8 @@ class script(object):
 
 🍀 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ; @cinehub_family"""
     HELP_TXT = """𝙷𝙴𝚈 {}
+<b>ɴᴇᴇᴅ ᴀɴʏ ʜᴇʟᴘ ❔
+ᴊᴜsᴛ ᴄʟɪᴄᴋ /help ᴛᴏ sᴏʟᴠᴇ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍs ᴀʙᴏᴜᴛ sᴛᴇᴘs</b>
 
 📌Oтнer Opтιoɴѕ 
 🎬 ඔයාලට මේ වගේ ғɪʟᴍ ᴏʀ ᴛᴠ sᴇʀɪᴇs එකක් හොයාගන්න ඕන නම් මෙන්න ඉන්නවා අපේ @media_searcher_bot 
