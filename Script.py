@@ -1,61 +1,67 @@
 class script(object):
-    START_TXT = """👋 **Hey There {} !**
+    START_TXT = """<b>👋 Hey There {} !
 
-**ɪ'ᴍ  🄲🄸🄽🄴🄷🅄🄱 සිංහල උපසිරැසි sᴇᴀʀᴄʜᴇʀ ʙᴏᴛ ɪɴ ᴄɪɴᴇʜᴜʙ ᴄᴏᴍᴍᴜɴɪᴛʏ** . .
+ɪ'ᴍ  🄲🄸🄽🄴🄷🅄🄱 සිංහල උපසිරැසි sᴇᴀʀᴄʜᴇʀ ʙᴏᴛ ɪɴ ᴄɪɴᴇʜᴜʙ ᴄᴏᴍᴍᴜɴɪᴛʏ . .
 
-⚡️ **ʙᴏᴛ ɴᴀᴍᴇ : @Sub_searcher_bot **
+⚡️ ʙᴏᴛ ɴᴀᴍᴇ : @Sub_searcher_bot</b>
 
 මට පුලුවන් ඔයාට ඕන කර ғɪʟᴍ එක ᴛᴠ sᴇʀɪᴇs එක සිංහල උපසිරැසි හොයල දෙන්න . . .
 ඔයාලට මොකක් හරි ගැටලුවක් ආවොත් ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ එක හරි message එකක් හරි දාන්න
 
-😇 ආ ! අපේ ᴅᴀᴛᴀʙᴀsᴇ එකේ ඔයා හොයන සිංහල උපසිරැසි තිබ්බෙ නැත්නම් message එකක් දාලා තියන්න අපි පුලුවන් ඉක්මනට ᴜᴘʟᴏᴀᴅ කරන්නම් 
+😇 ආ ! අපේ ᴅᴀᴛᴀʙᴀsᴇ එකේ ඔයා හොයන සිංහල උපසිරැසි තිබ්බෙ නැත්නම් message එකක් දාලා තියන්න අපි පුලුවන් ඉක්මනට ᴜᴘʟᴏᴀᴅ කරන්නම්
 
-🍀 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ; @cinehub_family
-
-⚠ All The Subtitle Files in this Bot is Either forwarded From Other Channels Or Taken From the Internet, we Don't Own Any Content About Subs
+⚠ ᴀʟʟ ᴛʜᴇ sᴜʙᴛɪᴛʟᴇ ғɪʟᴇs ɪɴ ᴛʜɪs ʙᴏᴛ ɪs ᴇɪᴛʜᴇʀ ғᴏʀᴡᴀʀᴅᴇᴅ ғʀᴏᴍ ᴏᴛʜᴇʀ ᴄʜᴀɴɴᴇʟs ᴏʀ ᴛᴀᴋᴇɴ ғʀᴏᴍ ᴛʜᴇ ɪɴᴛᴇʀɴᴇᴛ, ᴡᴇ ᴅᴏɴ'ᴛ ᴏᴡɴ ᴀɴʏ ᴄᴏɴᴛᴇɴᴛ ᴀʙᴏᴜᴛ sᴜʙs
 
 📌Other Options
 🎬 ඔයාලට මේ වගේ ғɪʟᴍ ᴏʀ ᴛᴠ sᴇʀɪᴇs එකක් හොයාගන්න ඕන නම් මෙන්න ඉන්නවා අපේ @media_searcher_bot 
 කරන්න තියෙන්නෙ මේ වගෙම ғɪʟᴍ එ‍කේ ᴛᴠ sᴇʀɪᴇs එ‍කේ name එක search කරන එක විතරයි
 
-🅢🅗🅐🅡🅔 & 🅢🅤🅟🅟🅞🅡🅣 🔗https://t.me/sub_searcher_bot 😍"""
+
+🍀 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ; @cinehub_family"""
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
-    ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>
-✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙷𝙴𝚁𝙾𝙺𝚄
-✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
-    SOURCE_TXT = """<b>NOTE:</b>
-- Eva Maria is a open source project. 
-- Source - https://github.com/EvamariaTG/EvaMaria  
+    ABOUT_TXT = """👋 Hey There ! 
 
-<b>DEVS:</b>
-- <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>"""
+ ɪ'ᴍ  🄲🄸🄽🄴🄷🅄🄱 мσνιє & тν ѕєяιєѕ sᴇᴀʀᴄʜᴇʀ ʙᴏᴛ ɪɴ ᴄɪɴᴇʜᴜʙ ᴄᴏᴍᴍᴜɴɪᴛʏ . .
+
+⚡️ <b>ʙᴏᴛ ɴᴀᴍᴇ : @media_searcher_bot</b>
+
+ ○ ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 3 
+ ○ sᴇʀᴠᴇʀ : ʜᴇʀᴏᴋᴜ 
+ ○ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : 🔐 
+ ○ ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ
+ ○ ᴅʙ ɴᴀᴍᴇ : ᴍᴏɴɢᴏ ᴅʙ
+ ○ ᴍᴏᴅɪғɪᴇᴅ & ᴇᴅɪᴛᴇᴅ ʙʏ : @Mr_Devil_6699 
+ ○ ᴍᴀɪɴ ʙᴀsɪᴄ ʀᴇᴘᴏ :  ᴛᴇᴀᴍ ᴇᴠᴀ ᴍᴀʀɪᴀ
+ ○ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : v1.0.1 | ʀᴇᴍᴀᴋᴇ : #1
+
+© <a href=https://t.me/cinehub_family>🄲🄸🄽🄴🄷🅄🄱</a>"""
+    SOURCE_TXT = """<b>📌 ησтє</b>
+
+ ○ ᴍᴀɪɴ ʙᴀsɪᴄ ʀᴇᴘᴏ :  ᴛᴇᴀᴍ ᴇᴠᴀ ᴍᴀʀɪᴀ
+ ○ ᴍᴏᴅɪғɪᴇᴅ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : 🔐 | ʀᴇᴍᴀᴋᴇ : #1"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
-- Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
+○ ғɪʟᴛᴇʀ ɪs ᴛʜᴇ ғᴇᴀᴛᴜʀᴇ ᴡᴇʀᴇ ᴜsᴇʀs ᴄᴀɴ sᴇᴛ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ʀᴇᴘʟɪᴇs ғᴏʀ ᴀ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴋᴇʏᴡᴏʀᴅ ᴀɴᴅ ᴇᴠᴀᴍᴀʀɪᴀ ᴡɪʟʟ ʀᴇsᴘᴏɴᴅ ᴡʜᴇɴᴇᴠᴇʀ ᴀ ᴋᴇʏᴡᴏʀᴅ ɪs ғᴏᴜɴᴅ ᴛʜᴇ ᴍᴇssᴀɢᴇ
 
-<b>NOTE:</b>
-1. eva maria should have admin privillage.
-2. only admins can add filters in a chat.
-3. alert buttons have a limit of 64 characters.
+<b>📌 ησтє</b>
+𝟷. ʙᴏᴛ sʜᴏᴜʟᴅ ʜᴀᴠᴇ ᴀᴅᴍɪɴ ᴘʀɪᴠɪʟʟᴀɢᴇ
+𝟸. ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴀᴅᴅ ғɪʟᴛᴇʀs ɪɴ ᴀ ᴄʜᴀᴛ
+3. ᴀʟᴇʀᴛ ʙᴜᴛᴛᴏɴs ʜᴀᴠᴇ ᴀ ʟɪᴍɪᴛ ᴏғ 𝟼𝟺 ᴄʜᴀʀᴀᴄᴛᴇʀs
 
 <b>Commands and Usage:</b>
-• /filter - <code>add a filter in chat</code>
-• /filters - <code>list all the filters of a chat</code>
-• /del - <code>delete a specific filter in chat</code>
-• /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
+• /filter - ᴀᴅᴅ ᴀ ғɪʟᴛᴇʀ ɪɴ ᴄʜᴀᴛ
+• /filters - ʟɪsᴛ ᴀʟʟ ᴛʜᴇ ғɪʟᴛᴇʀs ᴏғ ᴀ ᴄʜᴀᴛ 
+• /del - ᴅᴇʟᴇᴛᴇ ᴀ sᴘᴇᴄɪғɪᴄ ғɪʟᴛᴇʀ ɪɴ ᴄʜᴀᴛ (σωηєя oɴly)
+• /delall - ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ᴡʜᴏʟᴇ ғɪʟᴛᴇʀs ɪɴ ᴀ ᴄʜᴀᴛ (αdмιɴ oɴly)"""
     BUTTON_TXT = """Help: <b>Buttons</b>
 
 - Eva Maria Supports both url and alert inline buttons.
 
-<b>NOTE:</b>
-1. Telegram will not allows you to send buttons without any content, so content is mandatory.
-2. Eva Maria supports buttons with any telegram media type.
-3. Buttons should be properly parsed as markdown format
+<b>📌 ησтє</b>
+𝟷. ᴛᴇʟᴇɢʀᴀᴍ ᴡɪʟʟ ɴᴏᴛ ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ sᴇɴᴅ ʙᴜᴛᴛᴏɴs ᴡɪᴛʜᴏᴜᴛ ᴀɴʏ ᴄᴏɴᴛᴇɴᴛ, sᴏ ᴄᴏɴᴛᴇɴᴛ ɪs ᴍᴀɴᴅᴀᴛᴏʀʏ
+𝟸. ᴇᴠᴀ ᴍᴀʀɪᴀ sᴜᴘᴘᴏʀᴛs ʙᴜᴛᴛᴏɴs ᴡɪᴛʜ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ ᴛʏᴘᴇ
+𝟹. ʙᴜᴛᴛᴏɴs sʜᴏᴜʟᴅ ʙᴇ ᴘʀᴏᴘᴇʀʟʏ ᴘᴀʀsᴇᴅ ᴀs ᴍᴀʀᴋᴅᴏᴡɴ ғᴏʀᴍᴀᴛ 
 
 <b>URL buttons:</b>
 <code>[Button Text](buttonurl:https://t.me/EvaMariaBot)</code>
@@ -64,11 +70,12 @@ class script(object):
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
     AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
 
-<b>NOTE:</b>
-1. Make me the admin of your channel if it's private.
-2. make sure that your channel does not contains camrips, porn and fake files.
-3. Forward the last message to me with quotes.
- I'll add all the files in that channel to my db."""
+<b>📌 ησтє</b>
+𝟷. ᴍᴀᴋᴇ ᴍᴇ ᴛʜᴇ ᴀᴅᴍɪɴ ᴏғ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ɪғ ɪᴛ's ᴘʀɪᴠᴀᴛᴇ
+𝟸. ᴍᴀᴋᴇ sᴜʀᴇ ᴛʜᴀᴛ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴅᴏᴇs ɴᴏᴛ ᴄᴏɴᴛᴀɪɴs ᴄᴀᴍʀɪᴘs, ᴘᴏʀɴ ᴀɴᴅ ғᴀᴋᴇ ғɪʟᴇs
+𝟹. ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ʟᴀsᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴇ ᴡɪᴛʜ ǫᴜᴏᴛᴇs
+
+😇 ɪ'ʟʟ ᴀᴅᴅ ᴀʟʟ ᴛʜᴇ ғɪʟᴇs ɪɴ ᴛʜᴀᴛ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴍʏ ᴅʙ."""
     CONNECTION_TXT = """Help: <b>Connections</b>
 
 - Used to connect bot to PM for managing filters 
