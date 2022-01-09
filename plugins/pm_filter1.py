@@ -5,7 +5,9 @@ from pyrogram import Client, filters
 import re
 import random
 from pyrogram.errors import UserNotParticipant
-from utils import get_filter_results, get_file_details, is_subscribed, get_poster
+from utils import is_subscribed, get_poster
+from database.users_chats_db import db
+from database.ia_filterdb import Media, get_file_details, get_search_results
 BUTTONS = {}
 BOT = {}
 
