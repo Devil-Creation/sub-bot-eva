@@ -343,3 +343,23 @@ async def info(bot, message):
 async def play(bot, message):
     msg = await message.reply("🍿 **Movie | Series time**\n\n\n🎬 ඔන්න ඉතින් ඔයලගෙ පහසුවට අපි ᴍᴏᴠɪᴇ | ᴛᴠ sᴇʀɪᴇs බොට් කෙනෙක්වත් හදලා තියෙනවා \n\nකරන්න තියෙන්නෙ මේ උපසිරැසි බොට්ව ඔයා පවිච්චි කරපු විදියටම ᴍᴏᴠɪᴇ එකේ හෝ sᴇʀɪᴇs එකේ Name එක English වලින් type කරන එකයි \n\n\n⚡ **ᴍᴏᴠɪᴇ | sᴇʀɪᴇs ʙᴏᴛ; @media_searcher_bot** \n\n\n<a href='https://t.me/media_searcher_bot'>🤖</a> | Powered By; © <a href='https://t.me/cinehub_family'>🄲🄸🄽🄴🄷🅄🄱</a>", quote=True)
     msg = await message.reply("😇")
+
+@Client.on_message(filters.command('total') & filters.user(ADMINS))
+async def total(bot, message):
+    """Show total files in database"""
+    msg = await message.reply("Processing...⏳", quote=True)
+    try:
+        total = await Media.count_documents()
+        await msg.edit(f'📁 Saved files: {total} \n\n Boss තව Movie & Series ටිකක් Add කලා නම් හරිනේ 😜')
+    except Exception as e:
+        logger.exception('Failed to check total files')
+        await msg.edit(f'Error: {e}')
+
+
+@Client.on_message(filters.command('logger') & filters.user(ADMINS))
+async def log_file(bot, message):
+    """Send log file"""
+    try:
+        await message.reply_document('TelegramBot.log')
+    except Exception as e:
+        await message.reply(str(e))
