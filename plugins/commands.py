@@ -333,7 +333,7 @@ async def go(bot, message):
         InlineKeyboardButton("🎬 ᴄʟɪᴄᴋ ᴛᴏ sᴇᴀʀᴄʜ සිංහල උපසිරැසි", switch_inline_query_current_chat=''),
     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply("📌 ѕтєρѕ\n\n1. ᴛᴀᴘ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ɴᴀᴍᴇᴅ <b>' 🎬 ᴄʟɪᴄᴋ ᴛᴏ sᴇᴀʀᴄʜ සිංහල උපසිරැසි '</b>\n2. ᴛʜᴇɴ ᴛʏᴘᴇ ғɪʟᴍ ᴏʀ ᴛᴠ sᴇʀɪᴇs ɴᴀᴍᴇ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛᴇᴅ ᴛᴏ sᴇᴀʀᴄʜ \n3. sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴍᴇᴅɪᴀ ғɪʟᴇ (ᴀᴍᴏɴɢ ᴠᴀʀɪᴏᴜs ғᴏʀᴍᴀᴛs) & ᴅᴏᴡɴʟɪᴀᴅ ɪᴛ\n\n 😜<b>ɪғ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴛʜᴀᴛ sʏsᴛᴇᴍ ,ᴊᴜsᴛ ᴛʏᴘᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏғ ᴛʜᴇ ᴍᴏᴠɪᴇ<b> \n\n❔ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴀ ʜᴇʟᴘ , ᴛᴀᴘ' 📕 ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ' ʙᴜᴛᴛᴏɴ ᴛᴏ ʀᴇsᴏʟᴠᴇ ʏᴏᴜ ɪssᴜᴇ\n\n🔅 𝐈𝐟 𝐭𝐡𝐞𝐫𝐞 𝐰𝐚𝐬𝐧'𝐭 𝐲𝐨𝐮𝐫 𝐟𝐢𝐥𝐦 𝐨𝐫 𝐓𝐕 𝐬𝐞𝐫𝐢𝐞𝐬 𝐉𝐮𝐬𝐭 𝐭𝐲𝐩𝐞 𝐚𝐬 𝐚 𝐧𝐨𝐫𝐦𝐚𝐥 𝐜𝐡𝐚𝐭 𝐰𝐞 𝐰𝐢𝐥𝐥 𝐮𝐩𝐥𝐨𝐚𝐝 𝐢𝐭 𝐚𝐬 𝐬𝐨𝐨𝐧 𝐚𝐬 𝐩𝐨𝐬𝐬𝐢𝐛𝐥𝐞\n\n<a href='https://t.me/media_searcher_bot'>🤖</a> | © ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ @cinehub_family ", reply_markup=reply_markup)
+        await message.reply("📌 ѕтєρѕ\n\n1. ᴛᴀᴘ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ɴᴀᴍᴇᴅ <b>' 🎬 ᴄʟɪᴄᴋ ᴛᴏ sᴇᴀʀᴄʜ සිංහල උපසිරැසි '</b>\n2. ᴛʜᴇɴ ᴛʏᴘᴇ ғɪʟᴍ ᴏʀ ᴛᴠ sᴇʀɪᴇs ɴᴀᴍᴇ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛᴇᴅ ᴛᴏ sᴇᴀʀᴄʜ \n3. sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴍᴇᴅɪᴀ ғɪʟᴇ (ᴀᴍᴏɴɢ ᴠᴀʀɪᴏᴜs ғᴏʀᴍᴀᴛs) & ᴅᴏᴡɴʟɪᴀᴅ ɪᴛ\n\n 😜<b>ɪғ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴛʜᴀᴛ sʏsᴛᴇᴍ ,ᴊᴜsᴛ ᴛʏᴘᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏғ ᴛʜᴇ ᴍᴏᴠɪᴇ<b> \n\n❔ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴀ ʜᴇʟᴘ , ᴛᴀᴘ' 📕 ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ' ʙᴜᴛᴛᴏɴ ᴛᴏ ʀᴇsᴏʟᴠᴇ ʏᴏᴜ ɪssᴜᴇ\n\n🔅 𝐈𝐟 𝐭𝐡𝐞𝐫𝐞 𝐰𝐚𝐬𝐧'𝐭 𝐲𝐨𝐮𝐫 𝐟𝐢𝐥𝐦 𝐨𝐫 𝐓𝐕 𝐬𝐞𝐫𝐢𝐞𝐬 𝐉𝐮𝐬𝐭 𝐭𝐲𝐩𝐞 𝐚𝐬 𝐚 𝐧𝐨𝐫𝐦𝐚𝐥 𝐜𝐡𝐚𝐭 𝐰𝐞 𝐰𝐢𝐥𝐥 𝐮𝐩𝐥𝐨𝐚𝐝 𝐢𝐭 𝐚𝐬 𝐬𝐨𝐨𝐧 𝐚𝐬 𝐩𝐨𝐬𝐬𝐢𝐛𝐥𝐞\n\n<a href='https://t.me/sub_searcher_bot'>🤖</a> | © ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ @cinehub_family ", reply_markup=reply_markup)
 
 @Client.on_message(filters.command('info'))
 async def info(bot, message):
