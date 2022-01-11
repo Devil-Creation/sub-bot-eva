@@ -29,101 +29,84 @@ SPELL_CHECK = {}
 
 
 @Client.on_message(filters.text & filters.private & filters.incoming & filters.user(AUTH_USERS) if AUTH_USERS else filters.text & filters.private & filters.incoming)
-async def filter(client, message):       
-    if message.text.startswith("/"):
+async def give_filter(client,message):
+    k = await manual_filters(client, message)
+    if k == False:
+        await auto_filter(client, message)   
+
+@Client.on_callback_query(filters.regex(r"^next"))
+async def next_page(bot, query):
+
+    ident, req, key, offset = query.data.split("_")
+    if int(req) not in [query.from_user.id, 0]:
+        return await query.answer("oKda", show_alert=True)
+    try:
+        offset = int(offset)
+    except:
+        offset = 0
+    search = BUTTONS.get(key)
+    if not search:
+        await query.answer("You are using one of my old messages, please send the request again.",show_alert=True)
         return
-    if AUTH_CHANNEL:
-        invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
-        try:
-            user = await client.get_chat_member(int(AUTH_CHANNEL), message.from_user.id)
-            if user.status == "kicked":
-                await client.send_message(
-                    chat_id=message.from_user.id,
-                    text="Sorry Sir, You are Banned to use me.",
-                    parse_mode="markdown",
-                    disable_web_page_preview=True
-                )
-                return
-        except UserNotParticipant:
-            await client.send_message(
-                chat_id=message.from_user.id,
-                text="**Please Join My Updates Channel to use this Bot!**",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
-                        ]
-                    ]
+
+    files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
+    try:
+        n_offset = int(n_offset)
+    except:
+        n_offset = 0
+
+    if not files:
+        return
+    if SINGLE_BUTTON:
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
-                parse_mode="markdown"
-            )
-            return
-        except Exception:
-            await client.send_message(
-                chat_id=message.from_user.id,
-                text="Something went Wrong.",
-                parse_mode="markdown",
-                disable_web_page_preview=True
-            )
-            return
-    if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
-        return
-    if 2 < len(message.text) < 100:    
-        btn = []
-        search = message.text
-        files = await get_search_results(query=search, offset=offset, filter=True)
-        if files:
-            for file in files:
-                file_id = file.file_id
-                filename = f"[{get_size(file.file_size)}] {file.file_name}"
-                btn.append(
-                    [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
-                    )
-        else:
-            await client.send_sticker(chat_id=message.from_user.id, sticker='CAACAgUAAxkBAALaq2Gs9PizUzl1UfT24IWBuFJPlF9VAAMDAAJ0ZEFWEua6AAHCwAH6IgQ')
-            return
+            ]
+            for file in files
+        ]
+    else:
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"{file.file_name}", callback_data=f'files#{file.file_id}'
+                ),
+                InlineKeyboardButton(
+                    text=f"{get_size(file.file_size)}",
+                    callback_data=f'files_#{file.file_id}',
+                ),
+            ]
+            for file in files
+        ]
 
-        if not btn:
-            return
-
-        if len(btn) > 10: 
-            btns = list(split_list(btn, 10)) 
-            keyword = f"{message.chat.id}-{message.message_id}"
-            BUTTONS[keyword] = {
-                "total" : len(btns),
-                "buttons" : btns
-            }
-        else:
-            buttons = btn
-            buttons.append(
-                [InlineKeyboardButton(text="📜 Pages 1/1",callback_data="pages")]
-            )
-            poster=None
-            if API_KEY:
-                poster=await get_poster(search)
-            if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>🍿 මෙන්න ඔයා හොයපු {search} උපසිරැසිය</b> \n\n🥴 <i>ආ! ඹය පින්තූරෙ ගැන වැඩිය හිතන්න එපා ; හරියන උපසිරැසිය තිබ්බොත් download කරගන්න \n<b>දන්නැද්ද හිටපු ගමන් ඩාං වෙනවා ඩුං වෙනවා</b>. . . </i>", reply_markup=InlineKeyboardMarkup(buttons))
-
-            else:
-                await message.reply_text(f"<b>🍿 මෙන්න ඔයා හොයපු {search} උපසිරැසිය ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
-            return
-
-        data = BUTTONS[keyword]
-        buttons = data['buttons'][0].copy()
-
-        buttons.append(
-            [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
-        )    
-        buttons.append(
-            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
+    if 0 < offset <= 10:
+        off_set = 0
+    elif offset == 0:
+        off_set = None
+    else:
+        off_set = offset - 10
+    if n_offset == 0:
+        btn.append(
+            [InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"📃 Pages {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
         )
-        poster=None
-        if API_KEY:
-            poster=await get_poster(search)
-        if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>🍿 මෙන්න ඔයා හොයපු {search} උපසිරැසිය</b> \n\n★ ඹයා හොයන උපසිරැසිය තිබ්බෙ නැත්තන්  යට තියන NEXT බටන් එක ඹබලා බලන්න \n\n🥴 <i>ආ! ඹය පින්තූරෙ ගැන වැඩිය හිතන්න එපා ; හරියන උපසිරැසිය තිබ්බොත් download කරගන්න \n<b>දන්නැද්ද හිටපු ගමන් ඩාං වෙනවා ඩුං වෙනවා</b>. . . </i>", reply_markup=InlineKeyboardMarkup(buttons))
-        else:
-            await message.reply_text(f"<b>🍿 මෙන්න ඔයා හොයපු {search} උපසිරැසිය</b> \n\n★ ඹයා හොයන උපසිරැසිය තිබ්බෙ නැත්තන්  යට තියන NEXT බටන් එක ඹබලා බලන්න", reply_markup=InlineKeyboardMarkup(buttons))
+    elif off_set is None:
+        btn.append([InlineKeyboardButton(f"🗓 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
+    else:
+        btn.append(
+            [
+                InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(f"🗓 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"),
+                InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
+            ],
+        )
+    try:
+        await query.edit_message_reply_markup( 
+            reply_markup=InlineKeyboardMarkup(btn)
+        )
+    except MessageNotModified:
+        pass
+    await query.answer()
 
 
 
