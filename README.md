@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="assets/logo.jpg" alt="Eva Maria Logo">
-</p>
 <h1 align="center">
   <b>Devil-Sub Bot : #Main repo;Eva maria </b>
 </h1>
@@ -105,7 +102,7 @@ python3 bot.py
 • /link - to create link for one post
 ```
 ## Support
-[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/EvaMariaSupport)
+[![telegram badge](https://img.shields.io/badge/Telegram-CINEHUB-Group-30302f?style=flat&logo=telegram)](https://t.me/cinehub_family)
 [![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/TeamEvamaria)
 
 ## Credits 
@@ -117,6 +114,8 @@ python3 bot.py
  - Thanks To Mahesh For His Awesome [Media-Search-bot](https://github.com/Mahesh0253/Media-Search-bot)
  - Thanks To [Trojanz](https://github.com/trojanzhex) for Their Awesome [Unlimited Filter Bot](https://github.com/TroJanzHEX/Unlimited-Filter-Bot) And [AutoFilterBoT](https://github.com/trojanzhex/auto-filter-bot)
  - Thanks To All Everyone In This Journey
+ - I'm not a Coder , I Just modified the main repo of Eva Maria .All credits goes to first coders 
+ #devil
 
 ### Note
 
@@ -124,6 +123,10 @@ python3 bot.py
 
 Kanging this codes and and editing a few lines and releasing a V.x  or an [alpha](https://telegram.dog/subin_works/204), beta , gama branches of your repo wont make you a Developer.
 Fork the repo and edit as per your needs.
+
+I'm not a Coder , I Just modified the main repo of Eva Maria
+All credits goes to first coders 
+#devil
 
 ## Disclaimer
 [![GNU Affero General Public License 2.0](https://www.gnu.org/graphics/agplv3-155x51.png)](https://www.gnu.org/licenses/agpl-3.0.en.html#header)    
