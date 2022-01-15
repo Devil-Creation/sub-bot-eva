@@ -2,7 +2,7 @@
   <img src="assets/logo.jpg" alt="Eva Maria Logo">
 </p>
 <h1 align="center">
-  <b>Eva Maria Bot</b>
+  <b>Devil-Sub Bot : #Main repo;Eva maria </b>
 </h1>
 
 
@@ -132,5 +132,3 @@ Selling The Codes To Other People For Money Is *Strictly Prohibited*.
 
 ## Inspiration
 This is an attempt to create a clone of a BOAT made out of [banana trees 🌳](https://telegram.dog/GetTGLink/4187)
-
-[![For Vaza](https://telegra.ph/file/e743b0c8a04252774bac2.jpg)](https://telegra.ph/file/98342dc186fd7484cba91.mp4 "Oru Kootam Vazhakalk samarpikkunnu")
